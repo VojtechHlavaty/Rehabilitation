@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Automatically generated IO group description. Please do NOT modify!
+-->
+<SunriseIOGroupDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0">
+  <IOGroup DisplayName="PLC_Control" IconName="PLC_Control" SignalTypes="InOut" TemplateName="PLC_Control">
+    <IOs>
+      <DigitalIOItem Name="In_GetCup" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_TapSoda" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_TapBeer" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_NoCupDetected" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_Pos1Continue" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_ResetReq" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_TapSodaDone" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_TapBeerDone" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_ServeDone" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_IsAtHome" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="State" DataType="USINT" IOType="Input" UsedBitWidth="8" IsConnected="false">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_Pos2Continue" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_InitDone" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="TestInt" DataType="INT" IOType="Output" UsedBitWidth="16" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="App_Start" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="App_Enable" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="AutExt_Active" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="AutExt_AppReadyToStart" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="DefaultApp_Error" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Station_Error" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_ResetReq" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_CupPresenceChecked" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_1_Angle_Off" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_1_Angle_On" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_1_Angle_Foam" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_2_Angle_Foam" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_2_Angle_On" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_2_Angle_Off" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_1_Mode" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_2_Mode" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_2_Open_timer" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_2_Foam_timer" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_1_Open_timer" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Motor_1_Foam_timer" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_DrinkReady" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_ErrorInDrinkPrep" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Servo1Start" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Servo2Start" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_DrinkPrepBegan" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_IsGripping" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_Pos3Continue" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="AppStart_SP" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="false">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="AppEnable_SP" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="false">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_Force" DataType="USINT" IOType="Input" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_Force" DataType="USINT" IOType="Output" UsedBitWidth="8" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_ManualPullOut" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_PullOutServo" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_ManualPullOut" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_OPCUA_beer_start_left" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="In_OPCUA_beer_start_right" DataType="BOOL" IOType="Input" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_OpenCupDispencer" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_CloseCupDispencer" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_CupReceivedByHooman" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_RobotReadyForOrder" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_SecondBeerPosition" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_ThirdBeerPosition" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Out_BeerIsServed" DataType="BOOL" IOType="Output" UsedBitWidth="1" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+    </IOs>
+    <Description />
+  </IOGroup>
+</SunriseIOGroupDescription>

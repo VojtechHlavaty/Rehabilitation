@@ -1,0 +1,60 @@
+!SESSION 2024-10-16 10:51:52.098 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_45
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=cs_CZ
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:52:32.224
+!MESSAGE NLS unused message: DeleteTemplateHandler_ConfirmationTitleRapi2 in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:52:32.229
+!MESSAGE NLS unused message: DeleteHandler_DeleteFrameWithChildsDialogMessageRapi2 in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:52:32.229
+!MESSAGE NLS unused message: Rapi2DeleteHandler_ConfirmCategoryDeletionTitle in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:52:32.230
+!MESSAGE NLS unused message: Rapi2DeleteHandler_ConfirmCategoryDeletionMessage in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:52:32.231
+!MESSAGE NLS unused message: Rapi2CreateFrameHandler_OnlyOneFrameAllowed in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:52:32.231
+!MESSAGE NLS unused message: ScenegraphView_SelectRapi1 in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:52:32.231
+!MESSAGE NLS unused message: ScenegraphView_SelectRapi2 in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:52:32.231
+!MESSAGE NLS unused message: MassPropertySection_validationError_outOfRange in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+!SESSION 2024-10-16 10:58:06.279 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_45
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=cs_CZ
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:58:10.170
+!MESSAGE NLS unused message: DeleteTemplateHandler_ConfirmationTitleRapi2 in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:58:10.172
+!MESSAGE NLS unused message: DeleteHandler_DeleteFrameWithChildsDialogMessageRapi2 in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:58:10.172
+!MESSAGE NLS unused message: Rapi2DeleteHandler_ConfirmCategoryDeletionTitle in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:58:10.172
+!MESSAGE NLS unused message: Rapi2DeleteHandler_ConfirmCategoryDeletionMessage in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:58:10.174
+!MESSAGE NLS unused message: Rapi2CreateFrameHandler_OnlyOneFrameAllowed in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:58:10.174
+!MESSAGE NLS unused message: ScenegraphView_SelectRapi1 in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:58:10.174
+!MESSAGE NLS unused message: ScenegraphView_SelectRapi2 in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings
+
+!ENTRY org.eclipse.osgi 2 1 2024-10-16 10:58:10.174
+!MESSAGE NLS unused message: MassPropertySection_validationError_outOfRange in: com.kuka.roboticsAPI.eclipseBase.ResourceStrings

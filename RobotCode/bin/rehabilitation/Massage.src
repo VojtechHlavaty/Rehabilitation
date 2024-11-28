@@ -1,0 +1,69 @@
+&COMMENT 
+DEF Massage()
+;FOLD INI;%{PE}
+  ;FOLD BASISTECH INI
+    GLOBAL INTERRUPT DECL 3 WHEN $STOPMESS==TRUE DO IR_STOPM ( )
+    INTERRUPT ON 3 
+    BAS (#INITMOV,0 )
+  ;ENDFOLD (BASISTECH INI)
+  ;FOLD USER INI
+    ;Make your modifications here
+
+  ;ENDFOLD (USER INI)
+;ENDFOLD (INI)
+;***********************************************************
+;*
+;*          Default src Template for Kuka-Krc
+;*        Created 14/08/2007 by Siemens PLM
+;*
+;* Study               : AssistiveTechnologiesStudz
+;* Program             : Massage
+;* Generation Date     : 18/07/2024 at 10:42:01
+;* Robot               : iiwa14_Medienflansch
+;* User                : 42077
+;* Tecnomatix Software : Process Simulate Disconnected 2307
+;* Olp                 : Kuka-Krc 6.4
+;*                                                         
+;***********************************************************
+;#END_HEADER
+
+
+;FOLD PTP installation Vel=20 % Pinstallation Tool[0]:ToolFrame Base[1]:WORLD ;%{PE}
+;FOLD Parameters ;%{h}
+;Params IlfProvider=kukaroboter.basistech.inlineforms.movement.old; Kuka.IsGlobalPoint=False; Kuka.PointName=installation; Kuka.BlendingEnabled=False; Kuka.MoveDataPtpName=Pinstallation; Kuka.VelocityPtp=20; Kuka.CurrentCDSetIndex=0; Kuka.MovementParameterFieldEnabled=True; IlfCommand=PTP
+;ENDFOLD
+$BWDSTART = FALSE
+PDAT_ACT= PPinstallation
+FDAT_ACT= Finstallation
+BAS(#PTP_PARAMS,20)
+SET_CD_PARAMS(0)
+PTP Xinstallation 
+;ENDFOLD
+;FOLD PTP start Vel=20 % Pstart Tool[0]:ToolFrame Base[1]:WORLD ;%{PE}
+;FOLD Parameters ;%{h}
+;Params IlfProvider=kukaroboter.basistech.inlineforms.movement.old; Kuka.IsGlobalPoint=False; Kuka.PointName=start; Kuka.BlendingEnabled=False; Kuka.MoveDataPtpName=Pstart; Kuka.VelocityPtp=20; Kuka.CurrentCDSetIndex=0; Kuka.MovementParameterFieldEnabled=True; IlfCommand=PTP
+;ENDFOLD
+$BWDSTART = FALSE
+PDAT_ACT= PPstart
+FDAT_ACT= Fstart
+BAS(#PTP_PARAMS,20)
+SET_CD_PARAMS(0)
+PTP Xstart 
+;ENDFOLD
+;FOLD PTP p3C Vel=10 % Pp3C Tool[0]:ToolFrame Base[1]:WORLD ;%{PE}
+;FOLD Parameters ;%{h}
+;Params IlfProvider=kukaroboter.basistech.inlineforms.movement.old; Kuka.IsGlobalPoint=False; Kuka.PointName=p3C; Kuka.BlendingEnabled=False; Kuka.MoveDataPtpName=Pp3C; Kuka.VelocityPtp=10; Kuka.CurrentCDSetIndex=0; Kuka.MovementParameterFieldEnabled=True; IlfCommand=PTP
+;ENDFOLD
+$BWDSTART = FALSE
+PDAT_ACT= PPp3C
+FDAT_ACT= Fp3C
+BAS(#PTP_PARAMS,10)
+SET_CD_PARAMS(0)
+PTP Xp3C 
+;ENDFOLD
+
+
+;#START_TRAILER
+
+END
+

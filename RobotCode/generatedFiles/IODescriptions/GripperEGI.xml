@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Automatically generated IO group description. Please do NOT modify!
+-->
+<SunriseIOGroupDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0">
+  <IOGroup DisplayName="GripperEGI" IconName="GripperEGI" SignalTypes="InOut" TemplateName="GripperEGI">
+    <IOs>
+      <DigitalIOItem Name="Input1StatusWord" DataType="UDINT" IOType="Input" UsedBitWidth="32" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Input2ActualPosition" DataType="DINT" IOType="Input" UsedBitWidth="32" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Input3Reserve" DataType="DINT" IOType="Input" UsedBitWidth="32" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Input4Diagnostics" DataType="DINT" IOType="Input" UsedBitWidth="32" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Output1ControlWord" DataType="UDINT" IOType="Output" UsedBitWidth="32" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Output2Position" DataType="DINT" IOType="Output" UsedBitWidth="32" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Output3Speed" DataType="DINT" IOType="Output" UsedBitWidth="32" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+      <DigitalIOItem Name="Output4GrippingForce" DataType="DINT" IOType="Output" UsedBitWidth="32" IsConnected="true">
+        <Description />
+      </DigitalIOItem>
+    </IOs>
+    <Description />
+  </IOGroup>
+</SunriseIOGroupDescription>
