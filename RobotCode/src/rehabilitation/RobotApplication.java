@@ -1,9 +1,7 @@
 package rehabilitation;
 
 
-import javax.inject.Inject;
 import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
-import static com.kuka.roboticsAPI.motionModel.BasicMotions.*;
 import com.kuka.roboticsAPI.deviceModel.LBR;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -14,8 +12,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 
 /**
@@ -37,13 +33,6 @@ import org.w3c.dom.NodeList;
  * @see #dispose()
  */
 public class RobotApplication extends RoboticsAPIApplication {
-	
-	private LBR lbr;
-	
-	@Override
-    public void initialize() {
-        lbr = getContext().getDeviceFromType(LBR.class);
-    }
 
 	public void run() {
 		try {

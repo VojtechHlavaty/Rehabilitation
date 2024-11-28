@@ -2,8 +2,6 @@ package rehabilitation;
 
 import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
 
-import java.util.concurrent.TimeUnit;
-
 import javax.inject.Inject;
 
 import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;

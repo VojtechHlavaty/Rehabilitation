@@ -1,31 +1,18 @@
 package rehabilitation;
 
-
-import java.util.Arrays;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
 import static com.kuka.roboticsAPI.motionModel.BasicMotions.*;
 
-import com.kuka.roboticsAPI.deviceModel.JointEnum;
 import com.kuka.roboticsAPI.deviceModel.JointPosition;
 import com.kuka.roboticsAPI.deviceModel.LBR;
-import com.kuka.roboticsAPI.deviceModel.TeachInformation;
 import com.kuka.roboticsAPI.deviceModel.LBRE1Redundancy;
 import com.kuka.roboticsAPI.geometricModel.Frame;
-import com.kuka.roboticsAPI.geometricModel.AdditionalData;
-import com.kuka.roboticsAPI.geometricModel.ObjectFrame;
-import com.kuka.roboticsAPI.geometricModel.SpatialObject;
 import com.kuka.roboticsAPI.geometricModel.Tool;
 import com.kuka.roboticsAPI.geometricModel.Workpiece;
-import com.kuka.roboticsAPI.geometricModel.World;
-import com.kuka.roboticsAPI.motionModel.LIN;
-import com.kuka.roboticsAPI.motionModel.PTP;
-import com.kuka.roboticsAPI.motionModel.Spline;
-import com.kuka.roboticsAPI.persistenceModel.IPersistenceEngine;
-import com.kuka.roboticsAPI.persistenceModel.templateModel.FrameTemplate.Transformation;
-import com.kuka.roboticsAPI.applicationModel.IApplicationData;
+
 
 
 
@@ -49,7 +36,6 @@ import com.kuka.roboticsAPI.applicationModel.IApplicationData;
  */
 public class frame extends RoboticsAPIApplication {
     private LBR lbr;
-    private Workpiece testWorkpiece;
     
     @Inject
     @Named("Test")
@@ -70,12 +56,8 @@ public class frame extends RoboticsAPIApplication {
         
         Frame Xinstallation = new Frame(-250, 143.53, 721.31, Math.toRadians(5), Math.toRadians(3), Math.toRadians(-92));
         Frame Xstart = new Frame(-271.03, 534.41, 484.63, Math.toRadians(88.296), Math.toRadians(2.11), Math.toRadians(176.919));
-        Frame Xp3C = new Frame(-162.23, 436.88, 210.43, Math.toRadians(96.48), Math.toRadians(0.043), Math.toRadians(-172.994));
         //Frame Xp3Cbis = new Frame(-162.23, 436.88, 1216.86, Math.toRadians(-172.99), Math.toRadians(0.04), Math.toRadians(96.48));
         Frame XA3 = new Frame(146.95, 247.07, 584.12, Math.toRadians(-34.182), Math.toRadians(-18.291), Math.toRadians(170.088));
-        
-        JointPosition pos = new JointPosition(Math.toRadians(-4.33),Math.toRadians(21.83),Math.toRadians(0.0),Math.toRadians(119.76),
-        		Math.toRadians(91.17),Math.toRadians(80.50),Math.toRadians(4.82));
         
         //Test.move(ptp(pos).setJointVelocityRel(0.6));
         

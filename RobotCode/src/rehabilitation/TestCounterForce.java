@@ -251,7 +251,6 @@ public class TestCounterForce extends RoboticsAPIApplication {
         try {
             if (getPermission() == 1) return;
             ForceMonitoringThread forceMonitor = new ForceMonitoringThread(robot, logger);
-            PositionControlMode positionControlMode = new PositionControlMode();
             CartesianImpedanceControlMode impedanceControlMode = getImpedanceMode();
             
             forceMonitor.start();
