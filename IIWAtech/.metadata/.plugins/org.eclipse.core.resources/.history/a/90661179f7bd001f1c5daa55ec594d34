@@ -1,0 +1,30 @@
+package application;
+
+import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
+import com.kuka.roboticsAPI.deviceModel.LBR;
+import com.kuka.roboticsAPI.geometricModel.ObjectFrame;
+import com.kuka.roboticsAPI.geometricModel.SceneGraphObject;
+import com.kuka.roboticsAPI.geometricModel.World;
+
+public class ReplayFrames extends RoboticsAPIApplication {
+
+    @Inject
+    private LBR robot;
+
+    public void run() {
+    	List<SceneGraphObject> parentFrame = robot.getChildren();
+    	getLogger().warn(parentFrame.toString());
+    	if (parentFrame == null) {	
+    	    getLogger().warn("Parent frame not found.");
+    	    return;
+    	}
+    	return;
+    }
+    
+}

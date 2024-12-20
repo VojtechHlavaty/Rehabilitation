@@ -1,0 +1,49 @@
+package application;
+
+import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
+import javax.inject.Inject;
+
+import com.kuka.roboticsAPI.applicationModel.IApplicationData;
+import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
+import com.kuka.roboticsAPI.deviceModel.LBR;
+import com.kuka.roboticsAPI.motionModel.controlModeModel.CartesianImpedanceControlMode;
+
+public class ImpedanceControlExample extends RoboticsAPIApplication {
+
+    @Inject
+    private LBR robot;
+
+    @Inject
+    private IApplicationData data;
+
+    public void run() {
+        // Create and configure the CartesianImpedanceControlMode
+        CartesianImpedanceControlMode impedanceControlMode = new CartesianImpedanceControlMode();
+        
+        // Set stiffness for translation (X, Y, Z)
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_X).stiffness(1000.0); // Adjust stiffness as needed
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_Y).stiffness(1000.0);
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_Z).stiffness(1000.0);
+
+        // Set stiffness for rotation (A, B, C)
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_A).stiffness(300.0); // Adjust stiffness as needed
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_B).stiffness(300.0);
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_C).stiffness(300.0);
+
+        // Optional: Set damping for translation and rotation
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_X).damping(0.7); // Adjust damping as needed
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_Y).damping(0.7);
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_Z).damping(0.7);
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_A).damping(0.5);
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_B).damping(0.5);
+        impedanceControlMode.parametrize(CartesianImpedanceControlMode.CARTESIAN_C).damping(0.5);
+
+        // Move to a specified position in impedance control mode
+        try {
+            robot.move(ptp(robot.getFlange()).setMode(impedanceControlMode));
+            getLogger().info("Robot is now in impedance control mode.");
+        } catch (Exception e) {
+            getLogger().error("Failed to execute impedance control motion.", e);
+        }
+    }
+}

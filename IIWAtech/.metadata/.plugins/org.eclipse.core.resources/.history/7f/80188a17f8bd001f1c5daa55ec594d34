@@ -1,0 +1,38 @@
+package application;
+
+import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import com.kuka.roboticsAPI.applicationModel.IApplicationData;
+import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
+import com.kuka.roboticsAPI.deviceModel.LBR;
+import com.kuka.roboticsAPI.geometricModel.ObjectFrame;
+
+public class ReplayFrames extends RoboticsAPIApplication {
+
+    @Inject
+    private LBR robot;
+
+    @Inject
+    private IApplicationData data;
+    
+    public void run() {
+    	ObjectFrame parentFrame = data.getFrame("/RehabPoints");
+    	if (parentFrame == null) {	
+    	    getLogger().warn("Parent frame not found.");
+    	    return;
+    	}
+        for (ObjectFrame childName : parentFrame) {
+            if (childFrame != null) {
+                getLogger().info("Moving to frame: " + childFrame.getName());
+                robot.move(ptp(childFrame).setJointVelocityRel(0.2));
+            } else {
+                getLogger().warn("Child frame not found: " + childName);
+            }
+        }
+    }
+    
+}

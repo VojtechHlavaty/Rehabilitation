@@ -1,0 +1,32 @@
+package application;
+
+import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
+import javax.inject.Inject;
+
+import com.kuka.roboticsAPI.applicationModel.IApplicationData;
+import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
+import com.kuka.roboticsAPI.deviceModel.LBR;
+import com.kuka.roboticsAPI.geometricModel.ObjectFrame;
+
+public class CreateFrames extends RoboticsAPIApplication {
+
+    @Inject
+    private LBR robot;
+
+    @Inject
+    private IApplicationData data;
+    
+	public void run() {
+    	ObjectFrame parentFrame = data.getFrame("/RehabPoints");
+    	if (parentFrame == null) {	
+    	    getLogger().warn("Parent frame not found.");
+    	    return;
+    	}
+        for (ObjectFrame childFrame : parentFrame.getChildrenSnapshot()) {
+            getLogger().info("Moving to frame: " + childFrame.getName());
+            robot.move(ptp(childFrame).setJointVelocityRel(1));
+        }
+        return;
+    }
+    
+}

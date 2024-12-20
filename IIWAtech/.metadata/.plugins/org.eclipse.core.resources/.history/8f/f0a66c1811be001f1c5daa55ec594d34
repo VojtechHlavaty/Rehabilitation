@@ -1,0 +1,41 @@
+package application;
+
+import static com.kuka.roboticsAPI.motionModel.BasicMotions.ptp;
+import javax.inject.Inject;
+
+import com.kuka.roboticsAPI.applicationModel.IApplicationData;
+import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
+import com.kuka.roboticsAPI.deviceModel.LBR;
+import com.kuka.roboticsAPI.geometricModel.CartDOF;
+import com.kuka.roboticsAPI.motionModel.controlModeModel.CartesianImpedanceControlMode;
+
+public class CreateFrames extends RoboticsAPIApplication {
+
+    @Inject
+    private LBR robot;
+
+    @Inject
+    private IApplicationData data;
+
+    public void run() {
+        // Create and configure the CartesianImpedanceControlMode
+        CartesianImpedanceControlMode impedanceControlMode = new CartesianImpedanceControlMode();
+        
+        // Set stiffness for all Cartesian Degrees of Freedom (X, Y, Z, A, B, C)
+        impedanceControlMode.parametrize(CartDOF.X).setStiffness(50);
+        impedanceControlMode.parametrize(CartDOF.Y).setStiffness(50);
+        impedanceControlMode.parametrize(CartDOF.Z).setStiffness(50);
+        impedanceControlMode.parametrize(CartDOF.A).setStiffness(50);
+        impedanceControlMode.parametrize(CartDOF.B).setStiffness(50);
+        impedanceControlMode.parametrize(CartDOF.C).setStiffness(50);
+
+        // Activate impedance control without moving the robot
+        try {
+            // Keep the robot at its current position with impedance control
+            getLogger().info("Activating impedance control. Robot will hold its current position.");
+            robot.moveAsync(ptp(robot.getCurrentCartesianPosition(robot.getFlange())).setMode(impedanceControlMode));
+        } catch (Exception e) {
+            getLogger().error("Failed to enable impedance control mode.", e);
+        }
+    }
+}

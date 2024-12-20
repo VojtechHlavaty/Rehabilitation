@@ -1,0 +1,23 @@
+package application;
+
+import javax.inject.Inject;
+
+import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
+import com.kuka.roboticsAPI.deviceModel.LBR;
+import com.kuka.roboticsAPI.geometricModel.Frame;
+import com.kuka.roboticsAPI.geometricModel.World;
+
+public class ReplayFrames extends RoboticsAPIApplication {
+
+    @Inject
+    private LBR robot;
+
+    public void run() {
+    	Frame parentFrame = World.Current.getChild("RehabPoints");
+    	if (parentFrame == null) {
+    	    getLogger().warn("Parent frame not found.");
+    	    return;
+    	}
+    }
+    
+}
